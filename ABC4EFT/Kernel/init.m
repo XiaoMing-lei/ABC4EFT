@@ -10,7 +10,7 @@ $ABC4EFTVersion = "1.0.0";
 
 
 (* Amplitude *)
-{ab,sb,s,Mandelstam,SSYT,reduce};
+{ab,sb,s,Mandelstam,SSYT,AmpReduce};
 
 (* Model Input *)
 {ModelIni,AddGroup,AddField,AllTypesR,AllTypesC,GetTypes,CheckType,CheckGroup,SetNflavor,BosonicQ,AssocIni,TotCharge,deltaBL};
