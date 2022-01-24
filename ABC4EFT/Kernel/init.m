@@ -13,7 +13,7 @@ $ABC4EFTVersion = "1.0.0";
 {ab,sb,s,Mandelstam,SSYT,AmpReduce};
 
 (* Model Input *)
-{ModelIni,AddGroup,AddField,AllTypesR,AllTypesC,GetTypes,CheckType,CheckGroup,SetNflavor,BosonicQ,AssocIni,TotCharge,deltaBL};
+{ModelIni,AddGroup,AddField,AllTypesR,AllTypesC,GetTypes,CheckType,CheckGroup,SetNflavor,BosonicQ,AssocIni,TotCharge,deltaBL,EnCodeFromFolder};
 
 (* Lorentz Factor *)
 {LorentzList,LorentzBasis,LorentzCount,OperPoly};
