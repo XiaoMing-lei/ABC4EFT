@@ -9,17 +9,21 @@ BeginPackage["ABC4EFT`"];
 $ABC4EFTVersion = "1.0.0";
 
 
+(* ::Input::Initialization:: *)
+(* Read & Write *)
+{EnCodeFromFolder,LoadModel,LoadGroup};
+
 (* Amplitude *)
-{ab,sb,s,Mandelstam,SSYT,AmpReduce};
+{ab,sb,s,\[Epsilon]p,Mandelstam,SSYT,AmpReduce,SoftEvenComb,SoftOddComb,ExtractCoeff,YPermute};
 
 (* Model Input *)
-{ModelIni,AddGroup,AddField,AllTypesR,AllTypesC,GetTypes,CheckType,CheckGroup,SetNflavor,BosonicQ,AssocIni,TotCharge,deltaBL,EnCodeFromFolder};
+{ModelIni,AddGroup,AddField,AllTypesR,AllTypesC,GetTypes,CheckType,CheckGroup,SetNflavor,BosonicQ,AssocIni,TotCharge,deltaBL};
 
 (* Lorentz Factor *)
 {LorentzList,LorentzBasis,LorentzCount,OperPoly};
 
 (* Gauge Group Factor *)
-{GaugeCount,GaugeBasis};
+{GaugeCount,GaugeBasis,TensorConj,TensorInnerProduct,TraceClasses,MultiTrace,traceFullResult,TraceSymGroup};
 
 (* Formating *)
 {Ampform,transform,Present};
@@ -28,14 +32,14 @@ $ABC4EFTVersion = "1.0.0";
 {W2,W2Diagonalize,W2Check};
 
 (* Analysis *)
-{GetBasisForType,CountBasisForType,GetJBasisForType,StatResult,PresentStat,PrintStat,GenerateOperatorList,FindYCoord,FindMCoord};
+{CheckIndependence,GetBasisForType,CountBasisForType,GetJBasisForType,StatResult,PresentStat,PrintStat,GenerateOperatorList,FindCor,FindYCoord,FindMCoord};
 
 (* Useful Lie groups in GroupMath *)
 {U1,SU2,SU3,SU4,SU5,SU6};
-{FS,DC,eps3n,del2,del3,del3n,del8n,\[Tau],\[Lambda],eps2a,eps2f,eps3n,eps3a,eps3f,fabc,dabc,sigma,sigmab,Ga,sigmaT,sigmabT};
+{FS,DC,Tg,eps3n,del2,del3,del3n,del8n,\[Tau],\[Lambda],eps2a,eps2f,eps3n,eps3a,eps3f,fabc,dabc,sigma,sigmab,Ga,sigmaT,sigmabT};
 
 (* Group Profile *)
-{tAssumptions,tRep,tOut,tVal,TGen,tYDcol,tSimp,tY2M,GellMann,CF,PrintTensor};
+{tAssumptions,tRep,tOut,tVal,tRank,tReduce,TGen,tYDcol,tSimp,tY2M,tM2Y,GellMann,CF,PrintTensor};
 
 
 permutationBasis="left"; (* or "right" *)
@@ -66,7 +70,7 @@ Print["                    Jiang-Hao Yu, jhyu@itp.ac.cn          "];
 Print["                    Yu-Hui Zheng, zhengyuhui@itp.ac.cn     \n"];Print["                The package is available at ",Hyperlink["hepforge","https://abc4eft.hepforge.org"]];
 Print["               For the latest version, see the ",Hyperlink["GitHub","https://github.com/XiaoMing-lei/ABC4EFT"]];
 Print["               If you use this package in your research,          "];
-Print["          Please cite: arXiv: 2201.xxxxx, 2005.00008, 2007.07899         "];
+Print["          Please cite: arXiv: 2201.04639, 2005.00008, 2007.07899         "];
 
 
 EndPackage[]
